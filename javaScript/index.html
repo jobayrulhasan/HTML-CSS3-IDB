@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Form validitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="firstName" method="post" action="">
+            <h2 class="info">Information Collection Form</h2><hr />
+            <div>
+                <label for="firstName"><strong>First Name:</strong></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter first name" />
+            </div>
+            <div>
+                <label for="lastName"><strong>Last Name:</strong></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter last name" />
+            </div>
+            <div>
+                <label for="email"><strong>Email:</strong></label>
+                <input type="email" id="email" name="email" placeholder="Enter email" />
+            </div>
+            <div>
+                <label for="password"><strong>Password:</strong></label>
+                <input type="password" id="password" name="password" placeholder="Not less then 8 cheracture" />
+            </div>
+            <fieldset>
+                <legend>Selet your gender</legend>
+                <input type="radio" name="gender" value="male" /><strong>Male</strong><br />
+                <input type="radio" name="gender" value="female" /><strong>Female</strong><br />
+                <input type="radio" name="other" value="Other" /><strong>Others</strong><br />
+                <label id="errorGender" style="color:red"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Select your district</legend>
+                <label><strong>Your district</strong></label>
+                <select>
+                    <option>Select any one</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chittagong">Chittagong</option>
+                    <option value="rajshai">Rajshahi</option>
+                    <option value="khulna">Khulna</option>
+                    <option value="barishal">Barishal</option>
+                    <option value="sylhet">Sylhet</option>
+                    <option value="mymensingh">Mymensingh</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Select your course</legend>
+                <input type="checkbox" /><strong>Web Design</strong><br />
+                <input type="checkbox" /><strong>Web Devlopment</strong><br />
+                <input type="checkbox" /><strong>C#(C sharp)</strong><br />
+                <input type="checkbox" /><strong>Graphic Design</strong><br />
+                <input type="checkbox" /><strong>Networking</strong><br />
+                <input type="checkbox" /><strong>Database</strong><br />
+                <input type="checkbox" /><strong>Photoshop</strong><br />
+            </fieldset>
+            <fieldset>
+                <strong>Date of birth:</strong> <input type="date" name="dateOfBirth" id="date" />
+            </fieldset>
+            <div class="div-message">
+                <label><strong>Your message:</strong></label>
+                <textarea type="text" name="message"></textarea>
+            </div>
+            <div class="btn-div">
+                <input class="btn" type="submit" value="Submit" /><br />
+                <input class="btn" type="reset" value="Reset" /><br />
+            </div>
+            <div class="div-footer">
+                <p>	<strong>&#169;Jobayer@2021.All rights reserved</strong></p>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

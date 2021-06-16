@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery/jquery.min.js"></script>
+    <script src="query.js"></script>
+</head>
+<body>
+    <form id="first_form" method="post" action="">
+        <div>
+          <legend style="font-size: 40px; color: rgb(0, 0, 0);">Contact form</legend>
+          <label for="first_name"><strong>First Name:</strong><span>*</span></label>
+          <input type="text" id="first_name" name="first_name" required="required"/>
+        </div><br>
+
+        <div>
+          <label for="last_name"><strong>Last Name:</strong></label>
+          <input type="text" id="last_name" name="last_name"/>
+        </div><br>
+
+        <div>
+            <label for="phone" ><strong>Phone:</strong><span >*</span></label>
+            <input type="text" id="phone" name="phone"required="required" />
+          </div><br>
+
+        <div>
+          <label for="email"><strong>Email:</strong><span>*</span></label>
+          <input type="email" id="email" name="email" required="required"/>
+        </div><br>
+
+      <div >
+          <legend><strong>Select country</strong><span>*</span></legend>
+          <label><strong>Your country:</strong></label>
+          <select id="district" required="required" >
+          <option value="">--select--</option>
+          <option value="Dhaka"> India</option>
+          <option value="Chittagong">Pakistan</option>
+          <option value="Barishal"> Singapore</option>
+          <option value="Rajshahi"> Canada</option>
+          <option value="Khulna">Germany</option>
+          <option value="Sylhet">Finland</option>
+          </select><br>
+      </div><br>
+      <div>
+        <label>Subject</label>
+        <textarea name="field5" id="field5" class="field-long field-textarea"></textarea>
+      </div>
+      <br>
+      <div>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </div>
+   </form>
+</body>
+</html>

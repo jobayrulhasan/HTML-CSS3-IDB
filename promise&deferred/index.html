@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        /* div {
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin-right: 10px;
+            display: none;
+            background-color:rgb(92, 25, 25);
+        }; */
+        /* .image{
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+        }; */
+        .image{
+            max-width: 100%;
+            height: auto;
+        };
+    </style>
+</head>
+<body>
+    <button>Test</button>
+    <p>Image display is ready...</p>
+    <div class="image"><img src="bd1.jpg" alt="bd1"></div>
+    <div class="img"><img src="bd2.jpg" alt="bd2"></div>
+    <div class="img"><img src="bd3.jpg" alt="bd3"></div>
+    <div class="img"><img src="bd4.jpg" alt="bd4"></div>
+    <div class="img"><img src="bd5.jpg" alt="bd5"></div>
+    <script>
+    $("button").on("click", function () {
+        $("p").append("Started...");
+        $("div").each(function (i) {
+            $(this).fadeIn().fadeOut(2000 * (i + 1));
+        });
+
+    $("div").promise().done(function () {
+            $("p").append("Display is finished!");
+        });
+    });
+
+
+    
+</script>
+</body>
+</html>

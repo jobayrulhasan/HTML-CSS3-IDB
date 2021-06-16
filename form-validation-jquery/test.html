@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="jquery/jquery.min.js"></script>
+<style>
+form label {
+  display: inline-block;
+  width: 100px;
+}
+ 
+form div {
+  margin-bottom: 10px;
+}
+ 
+.error {
+  color: red;
+  margin-left: 5px;
+}
+ 
+label.error {
+  display: inline;
+  
+}
+</style>
+</head>
+<body>
+<h2>Example 1:</h2>
+<form id="first_form" method="post" action="">
+  <div>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name" />
+  </div>
+  <div>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name" />
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" />
+  </div>
+ <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" />
+  </div>
+<fieldset>
+<legend>Select your gender</legend>
+<input type="radio" name="gender" value="female"/>Female<br>
+<input type="radio" name="gender" value="male"/>Male<br>
+<label id="errorGender" style="color:red;"></label>
+</fieldset>
+<fieldset>
+<legend>Select your District</legend>
+<label>Your District</label>
+<select id="district">
+<option value="">--select--</option>
+<option value="Dhaka"> Dhaka</option>
+<option value="Chittagong"> Chittagong</option>
+<option value="Barishal"> Barishal</option>
+<option value="Rajshahi"> Rajshahi</option>
+</select>
+</fieldset>
+<fieldset>
+<legend>Select your Prefered course</legend>
+<input type="checkbox" value="webdesign" name="webdesign" class="course" /> Web design <br>
+<input type="checkbox" value="webdevelopment" name="webdevelopment" class="course" /> Web Development<br>
+<input type="checkbox" value="graphicdesign" name="graphicdesign" class="course" /> Graphic Design<br>
+<label id="errorCourse" style="color:red;"></label>
+</fieldset>
+ <fieldset>
+Date of Birth: <input type="date" name="dob" id="dob">
+</fieldset>
+<br>
+<div>
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+
+        $('#first_form').submit(function (e) {
+            reset();
+            e.preventDefault();
+            var first_name = $('#first_name').val();
+            var last_name = $('#last_name').val();
+            var email = $('#email').val();
+            var password = $('#password').val();
+            var dob = $('#dob').val();
+
+            $(".error").remove();
+
+            if (first_name.length < 4) {
+                $('#first_name').after('<span class="error">This field is required</span>');
+            }
+
+            if (last_name.length < 1) {
+                $('#last_name').after('<span class="error">This field is required</span>');
+            }
+
+            if (email.length < 1) {
+                $('#email').after('<span class="error">This field is required</span>');
+            } else if (validateEmail() != 1) {
+                //var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
+                //var validEmail = regEx.test(email);
+                //if (!validEmail) {
+                $('#email').after('<span class="error">Enter a valid email</span>');
+            }
+
+            if (password.length < 8) {
+                $('#password').after('<span class="error">Password must be at least 8 characters long</span>');
+            }
+
+            var gender = $('input[name=gender]:checked');
+            if (gender.length < 1) {
+                $("#errorGender").text('Choose a gender.');
+                //alert('Choose a gender.');
+            }
+
+            var district = $('#district').val();
+            if (district.length < 1) {
+                $('#district').after('<span class="error">Select a district.</span>');
+            }
+
+            var course = $('input[class=course]:checked');
+            if (course.length < 1) {
+                $("#errorCourse").text('Choose atleast one course.');
+                //alert('Choose atleast one course.');
+            }
+            if (dob.length < 1) {
+                $('#dob').after('<span class="error">This field is required</span>');
+            }
+        });
+    });
+
+    function reset() {
+        $(".error").remove();
+        $("#errorGender").text('');
+        $("#errorCourse").text('');
+    }
+
+    function validateEmail() {
+        var email;
+        var t = 1;
+        email = document.getElementById('email').value;
+        if (email.value == '') {
+            //alert('Empty');
+        }
+        var res = email.split('@');
+        if (email.split('@').length != 2) {
+            //alert('zero @ OR morethan one @ ');
+            t = 0;
+        }
+        var part1 = res[0];
+        var part2 = res[1];
+
+        // part1
+        if (part1.length == 0) {
+            //alert('no content bfr @');
+            t = 0;
+        }
+        if (part1.split(' ').length > 2) {
+            //alert('Invalid:Space before @')
+            t = 0;
+        }
+
+        //chk afr @ content:  part2
+        var dotsplt = part2.split('.');  //alert(“After @ :”+part2);
+        if (part2.split('.').length < 2) {
+            //alert('dot missing');
+            t = 0;
+        }
+        if (dotsplt[0].length == 0) {
+            //alert("no content b/ w @ and dot");
+            t = 0;
+        }
+        if (dotsplt[1].length < 2 || dotsplt[1].length > 4) {
+            //alert('err aftr dot');
+            t = 0;
+        }
+
+        if (t == 1) {
+            //alert('it is a valid email');
+        }
+
+        return t;
+    }
+</script>

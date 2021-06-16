@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Form design</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+       <form>
+            <h2 class="info">Information Collection Form</h2><hr />
+            <div>
+                <label>First Name:</label>
+                <input type="text" placeholder="Enter first name" required/>
+            </div>
+            <div>
+                <label>Last Name:</label>
+                <input type="text" placeholder="Enter last name" required/>
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="email" placeholder="Enter email" required/>
+            </div>
+            <div>
+                <label>Password:</label>
+                <input type="password" placeholder="Not less then 8 cheracture" required/>
+            </div>
+            <fieldset>
+                <legend required>Selet your gender</legend>
+                <input type="radio" name="gender" value="male"/>Male<br />
+                <input type="radio" name="gender" value="female"/>Female<br />
+                <input type="radio" name="other" value="Other"/>Others<br />
+                <label style="color:red"></label>
+            </fieldset>
+            <fieldset>
+                <legend>Select your district</legend>
+                <label>Your district</label>
+                <select>
+                    <option required >Select any one</option>
+                    <option value="dhaka">Dhaka</option>
+                    <option value="chittagong">Chittagong</option>
+                    <option value="rajshai">Rajshahi</option>
+                    <option value="khulna">Khulna</option>
+                    <option value="barishal">Barishal</option>
+                    <option value="sylhet">Sylhet</option>
+                    <option value="mymensingh">Mymensingh</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Select your course</legend>
+                <input type="checkbox" />Web Design<br />
+                <input type="checkbox" />Web Devlopment<br />
+                <input type="checkbox" />C#(C sharp)<br />
+                <input type="checkbox" />Graphic Design<br />
+                <input type="checkbox" />Networking<br />
+                <input type="checkbox" />Database<br />
+                <input type="checkbox" />Photo Shop<br />
+            </fieldset>
+            <fieldset class="dob">
+                Date of birth: <input type="date"  required/><hr />
+                <textarea name="text" id="text" cols="40" rows="5" placeholder="Enter your message" required></textarea>
+            </fieldset><br>
+            <div class="btn-div">
+                <button type="submit" value="Submit">Submit</button>
+                <button type="reset" value="Reset">Reset</button>
+            </div>
+            <div>
+                
+            </div>
+       </form>
+</body>
+</html>

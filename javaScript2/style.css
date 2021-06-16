@@ -1,0 +1,71 @@
+﻿form h1 {
+    color:black;
+    padding: 2px 2px;
+}
+form p{
+    color:tomato;
+    padding:2px 2px;
+}
+.manue a{
+    border:none;
+    color:#ffffff;
+    background-color:#332121;
+    padding:2px 5px;
+    text-align:center;
+    margin:2px 5px;
+    text-decoration:none;
+}
+form label{
+    /*padding-top:5px;*/
+    display: inline-block;
+    width: 120px;
+    padding: 3px;
+}
+form {
+    background-color: #e6c5c5;
+    width: 620px;
+    height: 650px;
+    padding-top: 1.5px;
+    justify-content: center;
+}
+form {
+    background-color: #e6c5c5;
+    width: 500px;
+    height: 550px;
+    padding-top: 1.5px;
+    justify-content: center;
+}
+#all-div{
+    padding-top:10px;
+}
+.div-message {
+    padding-top: 10px;
+}
+textarea {
+    overflow: hidden;
+    padding: 10px;
+    outline: none;
+    resize: none;
+}
+.div-button{
+    text-align:center;
+    padding-right: 20%;
+    padding-top:50px;
+}
+.btn1 {
+    display: inline-block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+}
+.div-footer p{
+    font-weight:100;
+    color:black;
+    padding-top:90px;
+    text-align:center;
+}

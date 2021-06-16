@@ -1,0 +1,51 @@
+/*...........CSS code is here.........*/
+body{
+  background-color: rgb(119, 63, 63); 
+}
+
+h1{
+  text-align: center;
+  padding-top: 10px;
+}
+
+legend{
+  font-size: 16px; 
+  margin-bottom: 20px;
+}
+
+span{
+  color:red;
+  font-size: 13px;
+}
+form{
+  width: 550px;
+  background-color: rgb(211, 207, 207);
+  box-shadow: 2 2 7px red;
+  border-radius: 5px;
+  padding:20px;
+}
+
+form label {
+display: inline-block;
+width: 100px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+   
+.error {
+  color: red;
+  margin-left: 5px;
+}
+   
+label.error {
+  display: inline;
+}
+  
+#font{
+  font-size: 16px;
+  font-weight: bold;
+}
+.btn-black{background-color:#0df120; color: #FFF;  margin-left:25%;}
+.btn-black:hover{color: rgb(92, 18, 18);}

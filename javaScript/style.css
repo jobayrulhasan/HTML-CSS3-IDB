@@ -1,0 +1,55 @@
+﻿.container{
+    background-color:rgb(66, 172, 172);
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgb(0,0,0,0.3);
+    width: 500px;
+    height: 600px;
+}
+.info {
+    font-style: normal;
+    padding-left: 10px;
+}
+
+form {
+    background-color: #e6c5c5;
+    width: 620px;
+    height: 800px;
+    padding-top: 1.5px;
+    justify-content: center;
+}
+
+form label{
+    display: inline-block;
+    width: 120px;
+    padding: 3px;
+}
+.div-message {
+    padding-top: 10px;
+}
+.btn {
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background-color: forestgreen;
+    padding: 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px 3px;
+}
+
+.btn-div {
+    padding-top:40px;
+    text-align: justify;
+}
+.error {
+    color: red;
+    margin-left: 5px;
+}
+.div-footer p {
+    font-weight: 100;
+    color: black;
+    padding-top: 10px;
+    text-align: center;
+}
